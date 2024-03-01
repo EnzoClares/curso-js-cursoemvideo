@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidades</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de estrangeiro: </h1>
+    <p>informe seu pais:  </p>
+    <input type="text" name="txtest" id="txtest">
+    <input type="button" value="confimar" onclick="naci()">
+    <div id="resp">
+
+    </div>
+    <script>
+        function naci(){
+            var nac = window.document.querySelector('input#txtest')
+            var resp = window.document.getElementById('resp')
+            if (nac != 'Brasil'){
+                resp.innerHTML='Você é estrangeiro'
+            } else{
+                resp.innerHTML='Você é brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>

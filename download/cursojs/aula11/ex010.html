@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+    <style>
+        body{
+            background-color: black;
+            color:white 
+        }
+        div#sit{
+            margin-top: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Verificador de multa: </h1>
+    <p>informe sua velocidade: </p>
+    <input type="number" name="txtvel" id="txtvel"> 
+    <input type="button" value="confirmar" onclick="calcular()" >
+    <div id="res"></div>
+    <div id="mul">
+
+    </div>
+    
+    <script>
+        function calcular(){
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var mul = window.document.querySelector('div#mul')
+        var vel = Number(txtv.value)
+        res.innerHTML = `<p>sua velocidade atual é de <strong>${vel} km/h</strong></p>`
+        if (vel>60) {
+            mul.innerHTML = '<p>você foi multado</p>'
+        } else {
+            mul.innerHTML = 'você <strong>não</strong> foi multado'
+        }
+        }
+       
+    </script>
+</body>
+</html>
